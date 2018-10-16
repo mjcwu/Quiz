@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CLUCKR!</title>
+
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+    <script src="/scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="/scripts/popper.min.js"></script>
+    <script src="/scripts/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand mb-4 bg-transparent border-bottom border-dark">
+        <nav class="navbar navbar-light bg-light p-0">
+          <a class="navbar-brand bg-transparent mr-0" href="/cluckr/index">
+            <img src="/images/chicken.jpg" width="40" height="40" alt="chicken">
+          </a>
+        </nav>
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <a class="btn btn-secondary m-1" href="/cluckr/new" role="button">
+              Cluck!
+            </a>
+
+            <% if (username) { %>
+              <span class="navbar-text text-secondary ml-auto mr-2 ">
+                <%= username %>
+                <!-- the '=' force to show js to html -->
+              </span>
+              <form action="/sign_out" method="POST" class="form-inline">
+                <button class="btn btn-secondary">Sign Out</button>
+              </form>
+            <% } else { %>
+              <a class="btn btn-secondary m-1" href="/cluckr/sign_in" role="button" >
+                Sign In
+              </a>          
+            <% } %>
+            
+          </ul> 
+          
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-fluid">

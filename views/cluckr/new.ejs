@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+
+<form action="/cluckr/index" method="POST">
+  <div class="form-group border rounded p-3 border border-dark ">
+    <h6 class="text-secondary mx-auto">Content</h6>  
+    <div class="form-group">
+      <textarea
+      class="form-control"
+      name="content"
+      cols="60"
+      rows="5"
+      placeholder="whatchoo cluckin' 'bout?"></textarea>
+    </div>
+    <h6 class="text-secondary mx-auto">Image Url</h6>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        name="imageUrl"
+        placeholder="e.g. http://imgur.com/myPic.jpg">
+    </div>
+    <div class="form-group d-flex justify-content-end ">
+    <input type="submit" value="Cluck!" class="btn btn-outline-secondary ">
+    </div>
+  </div>
+</form>
+
+<%- include("../partials/footer") %>
