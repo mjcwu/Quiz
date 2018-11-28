@@ -16,13 +16,11 @@ router.post("/cluckr/index", (req, res) => {
       username: req.cookies.username,
       content: req.body.content,
       imageUrl: req.body.imageUrl,
+
     })
-    // .insert({
-    //   timeAgo: timeSince(req.createdAt)
-    // })
     .returning("*")
     .then( cluckr => {
-      // console.log(cluckr.timeAgo)
+      timeago().render($('.need_to_be_rendered'));
       res.redirect("/cluckr/index");
     });
     

@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const app = express();
+var timeago = require("timeago.js");
+
 
 app.set("view engine", "ejs");
 app.use(morgan('dev'));
