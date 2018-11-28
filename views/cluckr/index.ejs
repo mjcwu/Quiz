@@ -1,0 +1,26 @@
+<%- include("../partials/header") %>
+
+<div class="cluckr-cards">
+  <% for (let cluckr of cluckrs) { %> 
+
+    <div class="media border rounded p-3 border border-dark mb-3">
+      <img class="mr-3" src="/images/avatar.jpg" height="50" width="50" alt="Rooster">
+      <div class="media-body">
+      <h6 class="mt-0"><%= cluckr.username %> · <%= cluckr.createdAt %></h6>
+
+      <span class="need_to_be_rendered" datetime="cluckr.createdAt"</span>
+
+
+      <% if (cluckr.content) { %>
+        <%= cluckr.content %> <br>
+      <% } %>
+      <% if (cluckr.imageUrl) { %>
+        <img class="mr-3" src="/images/subImage.png" width="90%" alt="XXXX">
+      <% } %>
+      </div>
+    </div>
+  <% } %>
+</div>
+
+
+<%- include("../partials/footer") %>

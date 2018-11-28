@@ -1,0 +1,19 @@
+<%- include("../partials/header") %>
+
+<form action="/sign_in" method="POST">
+  <div class="form-group border rounded p-3 border border-dark">
+    <h6 class="text-secondary mx-auto">Username</h6>
+    <div class="input-group mx-auto ">
+      <input
+        type="string"
+        class="form-control"
+        name="username"
+        placeholder="e.g. Michael Jordon">
+    </div>
+    <div class="d-flex justify-content-end mt-3">
+      <input type="submit" value="Sign In" class="btn btn-outline-secondary">
+    </div>  
+  </div>
+</form>
+
+<%- include("../partials/footer") %>
